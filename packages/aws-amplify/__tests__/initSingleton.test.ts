@@ -155,9 +155,7 @@ describe('initSingleton (DefaultAmplify)', () => {
 				it('should use cookie storage if LibraryOptions.ssr is set to true for the default CognitoUserPoolsTokenProvider', () => {
 					Amplify.configure(mockResourceConfig, { ssr: true });
 
-					expect(MockCookieStorage).toHaveBeenCalledWith({
-						sameSite: 'strict',
-					});
+					expect(MockCookieStorage).toHaveBeenCalled();
 					expect(
 						mockCognitoUserPoolsTokenProviderSetKeyValueStorage
 					).toHaveBeenCalledTimes(1);

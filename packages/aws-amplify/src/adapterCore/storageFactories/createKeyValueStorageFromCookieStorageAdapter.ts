@@ -5,8 +5,9 @@ import { KeyValueStorageInterface } from '@aws-amplify/core';
 import { CookieStorage } from '@aws-amplify/core/internals/adapter-core';
 
 export const defaultSetCookieOptions: CookieStorage.SetCookieOptions = {
-	sameSite: 'strict',
-	secure: true,
+	// TODO: allow configure with a public interface
+	// sameSite: 'strict',
+	// secure: true,
 };
 const ONE_YEAR_IN_MS = 365 * 24 * 60 * 60 * 1000;
 
